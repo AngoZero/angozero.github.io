@@ -1,0 +1,96 @@
+---
+// components/Hero.astro
+const currentYear = new Date().getFullYear();
+---
+
+<section
+    class="relative h-screen min-h-[600px] flex flex-col justify-center items-center bg-white text-black overflow-hidden border-b border-black selection:bg-black selection:text-white"
+>
+    <div
+        class="absolute inset-0 z-0 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px]"
+    >
+    </div>
+
+    <div
+        class="absolute top-0 left-0 w-full p-6 md:p-10 flex justify-between items-start z-20 pointer-events-none mix-blend-difference"
+    >
+        <div class="flex flex-col gap-1">
+            <p
+                class="font-mono text-xs md:text-sm font-bold uppercase tracking-widest text-gray-500"
+            >
+                [ Fullstack Developer ]
+            </p>
+            <p class="font-mono text-[10px] text-gray-400">
+                v2.0.{currentYear}
+            </p>
+        </div>
+        <div class="text-right">
+            <p
+                class="font-mono text-xs md:text-sm font-bold uppercase tracking-widest text-gray-500"
+            >
+                MX
+            </p>
+        </div>
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center text-center px-4">
+        <p
+            class="font-mono text-sm text-gray-500 mb-6 uppercase tracking-[0.2em] animate-fade-in-down"
+        >
+            Portfolio
+        </p>
+
+        <h1
+            class="font-black text-[13vw] md:text-[14vw] leading-[0.8] tracking-tighter uppercase flex flex-col select-none"
+        >
+            <span class="block text-black"> Djillali </span>
+            <span
+                class="block text-transparent bg-clip-text bg-gradient-to-b from-gray-800 via-gray-400 to-gray-100"
+            >
+                Adair
+            </span>
+        </h1>
+
+        <div class="mt-12 flex flex-col items-center gap-4">
+            <div class="h-12 w-[1px] bg-black"></div>
+
+            <div class="group cursor-pointer">
+                <p
+                    class="text-xl md:text-2xl font-bold text-black tracking-tight group-hover:tracking-widest transition-all duration-300"
+                >
+                    @AngoZero
+                </p>
+                <div
+                    class="h-[1px] w-0 group-hover:w-full bg-black transition-all duration-300"
+                >
+                </div>
+            </div>
+
+            <p class="text-xs text-gray-400 italic font-serif mt-2">
+                "this is my design"
+            </p>
+        </div>
+    </div>
+
+    <div
+        class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-bounce"
+    >
+        <span
+            class="font-mono text-[10px] uppercase tracking-widest text-gray-400"
+            >Scroll</span
+        >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-black"
+            ><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg
+        >
+    </div>
+</section>

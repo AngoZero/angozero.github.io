@@ -1,0 +1,145 @@
+---
+const projects = [
+    {
+        title: "E-Commerce Dashboard",
+        description:
+            "Panel de administración integral para gestión de inventario y ventas en tiempo real.",
+        technologies: ["React", "Next.js", "Tailwind", "Supabase"],
+        image: null, // Dejamos esto null para probar el placeholder
+        link: "#",
+    },
+    {
+        title: "Fintech App Core",
+        description:
+            "Arquitectura backend para procesamiento de pagos seguros y microservicios bancarios.",
+        technologies: ["C#", ".NET Core", "SQL Server", "Docker"],
+        image: null,
+        link: "#",
+    },
+];
+---
+
+<section class="py-32 px-6 bg-white text-black border-t border-black">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-24">
+            <h2
+                class="font-black text-[10vw] leading-[0.8] tracking-tighter uppercase mb-4"
+            >
+                Selected <span
+                    class="text-transparent bg-clip-text bg-gradient-to-b from-gray-400 to-gray-200"
+                    >Work</span
+                >
+            </h2>
+            <div class="flex items-center gap-4">
+                <div class="h-2 w-24 bg-black"></div>
+                <p
+                    class="font-mono text-sm uppercase tracking-widest text-gray-500"
+                >
+                    [ Case Studies 2024-2025 ]
+                </p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            {
+                projects.map((project, index) => (
+                    <article class="group relative flex flex-col h-full">
+                        <div
+                            class="
+                relative flex-1 flex flex-col
+                border-2 border-black bg-white 
+                transition-transform duration-300 ease-out
+                hover:-translate-y-2 hover:translate-x-2
+                shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]
+            "
+                        >
+                            <div class="flex justify-between items-center p-6 border-b-2 border-black bg-gray-50">
+                                <span class="font-mono text-xl font-bold">
+                                    0{index + 1}.
+                                </span>
+                                <a
+                                    href={project.link}
+                                    class="w-10 h-10 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2"
+                                        stroke="currentColor"
+                                        class="w-4 h-4"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                                        />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div class="aspect-video w-full border-b-2 border-black overflow-hidden relative group-hover:bg-gray-100 transition-colors">
+                                {project.image ? (
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                    />
+                                ) : (
+                                    /* Placeholder Pattern (Geometría abstracta CSS) */
+                                    <div class="w-full h-full bg-[#f0f0f0] relative opacity-50">
+                                        <div
+                                            class="absolute inset-0"
+                                            style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 20px 20px; opacity: 0.2;"
+                                        />
+                                        <div class="absolute inset-0 flex items-center justify-center">
+                                            <span class="font-black text-4xl text-gray-300 uppercase tracking-widest select-none">
+                                                No Preview
+                                            </span>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+
+                            <div class="p-8 flex flex-col gap-6">
+                                <div>
+                                    <h3 class="text-3xl font-bold uppercase tracking-tight mb-3 group-hover:underline decoration-4 underline-offset-4">
+                                        {project.title}
+                                    </h3>
+                                    <p class="text-gray-600 leading-relaxed font-medium">
+                                        {project.description}
+                                    </p>
+                                </div>
+
+                                <div class="mt-auto pt-6 border-t border-gray-200">
+                                    <div class="flex flex-wrap gap-2">
+                                        {project.technologies.map((tech) => (
+                                            <span
+                                                class="
+                        px-3 py-1 text-xs font-mono font-bold uppercase tracking-wide
+                        border border-black text-black bg-transparent
+                        hover:bg-black hover:text-white transition-colors cursor-default
+                      "
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                ))
+            }
+        </div>
+
+        <div class="mt-24 text-center">
+            <a
+                href="#"
+                class="inline-block border-b-2 border-black pb-1 text-xl font-bold uppercase tracking-widest hover:text-gray-500 transition-colors"
+            >
+                View All Projects
+            </a>
+        </div>
+    </div>
+</section>
