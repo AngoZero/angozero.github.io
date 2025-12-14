@@ -1,6 +1,4 @@
 ---
-// components/TechStack.astro
-
 const techCategories = [
     {
         title: "Frontend & UI Design",
@@ -45,10 +43,6 @@ const techCategories = [
             {
                 name: "FastAPI",
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
-            },
-            {
-                name: ".NET Core",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
             },
             {
                 name: "REST APIs",
@@ -180,12 +174,15 @@ const techCategories = [
                                                 <img
                                                     src={tech.icon}
                                                     alt={tech.name}
-                                                    class="w-full h-full object-contain filter grayscale opacity-40 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
+                                                    class="w-full h-full object-contain filter transition-all duration-300 
+                                                           grayscale-0 opacity-100 
+                                                           md:grayscale md:opacity-40 
+                                                           group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
                                                     loading="lazy"
                                                 />
                                             </div>
 
-                                            <p class="font-mono text-[10px] uppercase tracking-wider text-gray-400 group-hover:text-black transition-colors text-center font-bold">
+                                            <p class="font-mono text-[10px] uppercase tracking-wider text-gray-600 md:text-gray-400 group-hover:text-black transition-colors text-center font-bold">
                                                 {tech.name}
                                             </p>
                                         </div>
