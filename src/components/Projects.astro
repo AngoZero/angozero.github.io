@@ -8,6 +8,14 @@ const projects = [
         image: null,
         link: "https://github.com/AngoZero/convertidor-sql",
     },
+    {
+        title: "Gamir",
+        description:
+            "Landing page de alto rendimiento diseñada con arquitectura de islas para tiempos de carga instantáneos y SEO optimizado.",
+        technologies: ["Astro", "Tailwind", "TypeScript"],
+        image: null,
+        link: "https://angozero.github.io/gamir/",
+    },
 ];
 ---
 
@@ -51,6 +59,8 @@ const projects = [
                                 </span>
                                 <a
                                     href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     class="w-10 h-10 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors"
                                 >
                                     <svg
