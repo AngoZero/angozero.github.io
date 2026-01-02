@@ -2,12 +2,20 @@
 import Layout from "../layouts/Layout.astro";
 import { site } from "../data/site";
 import Hero from "../components/sections/Hero.astro";
+import Services from "../components/sections/Services.astro";
+import Process from "../components/sections/Process.astro";
 import Technologies from "../components/sections/Technologies.astro";
 import Projects from "../components/sections/Projects.astro";
+import FAQ from "../components/sections/FAQ.astro";
+import Contact from "../components/sections/Contact.astro";
 ---
 
 <Layout title={site.title} description={site.description}>
 	<Hero />
-	<Technologies />
+	<Services />
+	<Process />
 	<Projects />
+	<Technologies />
+	<FAQ />
+	<Contact />
 </Layout>

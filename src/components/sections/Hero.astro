@@ -18,7 +18,7 @@ const currentYear = new Date().getFullYear();
             <p
                 class="font-mono text-xs md:text-sm font-bold uppercase tracking-widest text-gray-500"
             >
-                [ Fullstack Developer ]
+                [ Desarrollador Fullstack ]
             </p>
             <p class="font-mono text-[10px] text-gray-400">
                 v2.0.{currentYear}
@@ -37,7 +37,7 @@ const currentYear = new Date().getFullYear();
         <p
             class="font-mono text-sm text-gray-500 mb-6 uppercase tracking-[0.2em] animate-fade-in-down"
         >
-            Portfolio
+            Software a la medida
         </p>
 
         <h1
@@ -51,8 +51,28 @@ const currentYear = new Date().getFullYear();
             </span>
         </h1>
 
-        <div class="mt-12 flex flex-col items-center gap-4">
+        <p class="mt-6 max-w-xl text-gray-600 font-medium">
+            Diseño y desarrollo sistemas completos: altas de usuarios, gestión
+            de información y flujos operativos para empresas.
+        </p>
+
+        <div class="mt-10 flex flex-col items-center gap-6">
             <div class="h-12 w-[1px] bg-black"></div>
+
+            <div class="flex flex-col sm:flex-row items-center gap-4">
+                <a
+                    href="#contact"
+                    class="px-6 py-3 border-2 border-black font-mono uppercase tracking-widest text-xs hover:bg-black hover:text-white transition-colors"
+                >
+                    Solicitar propuesta
+                </a>
+                <a
+                    href="#projects"
+                    class="px-6 py-3 border border-black font-mono uppercase tracking-widest text-xs hover:bg-gray-100 transition-colors"
+                >
+                    Ver proyectos
+                </a>
+            </div>
 
             <div class="group cursor-pointer">
                 <p
@@ -66,18 +86,16 @@ const currentYear = new Date().getFullYear();
                 </div>
             </div>
 
-            <p class="text-xs text-gray-400 italic font-serif mt-2">
-                "this is my design"
-            </p>
         </div>
     </div>
 
     <div
-        class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-bounce"
+        class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 hidden sm:flex flex-col items-center gap-2 animate-bounce"
+        aria-hidden="true"
     >
         <span
             class="font-mono text-[10px] uppercase tracking-widest text-gray-400"
-            >Scroll</span
+            >Desplazar</span
         >
         <svg
             xmlns="http://www.w3.org/2000/svg"

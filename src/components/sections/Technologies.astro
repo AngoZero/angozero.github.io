@@ -17,19 +17,19 @@ import { technologyCategories } from "../../data/technologies";
                 <p
                     class="text-xs font-mono text-gray-500 uppercase tracking-widest"
                 >
-                    [ Proficiency_Overview ]
+                    [ Resumen_de_habilidades ]
                 </p>
-                <p class="text-xs font-mono text-gray-400">// Stack</p>
+                <p class="text-xs font-mono text-gray-400">// Tecnologías</p>
             </div>
 
             <h2
-                class="font-black text-[10vw] md:text-[12vw] leading-[0.8] tracking-tighter uppercase flex flex-col select-none"
+                class="font-black text-[clamp(2.5rem,10vw,8rem)] md:text-[clamp(3rem,11vw,9rem)] leading-[0.85] tracking-tighter uppercase flex flex-col select-none break-words"
             >
-                <span class="block text-black">Tech</span>
+                <span class="block text-black">Stack</span>
                 <span
                     class="block text-transparent bg-clip-text bg-gradient-to-b from-gray-800 via-gray-400 to-gray-100"
                 >
-                    Stack
+                    tecnológico
                 </span>
             </h2>
         </div>
@@ -42,7 +42,7 @@ import { technologyCategories } from "../../data/technologies";
                             <span class="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-b from-gray-200 to-white stroke-black opacity-50 group-hover/section:opacity-100 group-hover/section:from-black group-hover/section:to-gray-500 transition-all duration-500 leading-none mb-4 select-none">
                                 0{index + 1}
                             </span>
-                            <h3 class="text-2xl font-bold uppercase tracking-tight flex items-center gap-4">
+                            <h3 class="text-2xl font-bold uppercase tracking-tight flex items-center gap-4 break-words leading-tight">
                                 <span class="w-8 h-[2px] bg-black" />
                                 {category.title}
                             </h3>

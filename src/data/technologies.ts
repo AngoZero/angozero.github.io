@@ -10,7 +10,7 @@ export type TechnologyCategory = {
 
 export const technologyCategories: TechnologyCategory[] = [
     {
-        title: "Frontend & UI Design",
+        title: "Frontend y diseño UI",
         skills: [
             {
                 name: "HTML5",
@@ -39,7 +39,7 @@ export const technologyCategories: TechnologyCategory[] = [
         ],
     },
     {
-        title: "Backend & APIs",
+        title: "Backend y APIs",
         skills: [
             {
                 name: "Node.js",
@@ -60,7 +60,7 @@ export const technologyCategories: TechnologyCategory[] = [
         ],
     },
     {
-        title: "Polyglot Languages",
+        title: "Lenguajes",
         skills: [
             {
                 name: "JavaScript",
@@ -85,7 +85,7 @@ export const technologyCategories: TechnologyCategory[] = [
         ],
     },
     {
-        title: "Mobile & Desktop",
+        title: "Móvil y escritorio",
         skills: [
             {
                 name: "React Native",
@@ -106,7 +106,7 @@ export const technologyCategories: TechnologyCategory[] = [
         ],
     },
     {
-        title: "Data & DevOps",
+        title: "Datos y DevOps",
         skills: [
             {
                 name: "SQL Server",
