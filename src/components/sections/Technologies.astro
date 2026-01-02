@@ -1,0 +1,81 @@
+---
+import { technologyCategories } from "../../data/technologies";
+---
+
+<section
+    id="stack"
+    class="relative py-32 px-4 md:px-8 bg-white text-black overflow-hidden"
+>
+    <div
+        class="absolute inset-0 z-0 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px]"
+    >
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="mb-32 border-b border-black pb-8">
+            <div class="flex justify-between items-end mb-4">
+                <p
+                    class="text-xs font-mono text-gray-500 uppercase tracking-widest"
+                >
+                    [ Proficiency_Overview ]
+                </p>
+                <p class="text-xs font-mono text-gray-400">// Stack</p>
+            </div>
+
+            <h2
+                class="font-black text-[10vw] md:text-[12vw] leading-[0.8] tracking-tighter uppercase flex flex-col select-none"
+            >
+                <span class="block text-black">Tech</span>
+                <span
+                    class="block text-transparent bg-clip-text bg-gradient-to-b from-gray-800 via-gray-400 to-gray-100"
+                >
+                    Stack
+                </span>
+            </h2>
+        </div>
+
+        <div class="flex flex-col gap-24">
+            {
+                technologyCategories.map((category, index) => (
+                    <div class="relative grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 group/section">
+                        <div class="md:col-span-4 flex flex-col justify-start md:sticky md:top-32 h-fit">
+                            <span class="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-b from-gray-200 to-white stroke-black opacity-50 group-hover/section:opacity-100 group-hover/section:from-black group-hover/section:to-gray-500 transition-all duration-500 leading-none mb-4 select-none">
+                                0{index + 1}
+                            </span>
+                            <h3 class="text-2xl font-bold uppercase tracking-tight flex items-center gap-4">
+                                <span class="w-8 h-[2px] bg-black" />
+                                {category.title}
+                            </h3>
+                        </div>
+
+                        <div class="md:col-span-8">
+                            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                                {category.skills.map((tech) => (
+                                    <div class="group relative bg-white border border-gray-200 hover:border-black transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                                        <div class="p-4 flex flex-col items-center gap-4 h-full justify-center">
+                                            <div class="w-12 h-12 flex items-center justify-center p-1 bg-gray-50 rounded-full group-hover:bg-white transition-colors">
+                                                <img
+                                                    src={tech.icon}
+                                                    alt={tech.name}
+                                                    class="w-full h-full object-contain filter transition-all duration-300 
+                                                           grayscale-0 opacity-100 
+                                                           md:grayscale md:opacity-40 
+                                                           group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
+                                                    loading="lazy"
+                                                />
+                                            </div>
+
+                                            <p class="font-mono text-[10px] uppercase tracking-wider text-gray-600 md:text-gray-400 group-hover:text-black transition-colors text-center font-bold">
+                                                {tech.name}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
