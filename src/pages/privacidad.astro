@@ -1,0 +1,148 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { site } from "../data/site";
+---
+
+<Layout
+    title={`Política de Privacidad | ${site.name}`}
+    description="Política de privacidad y tratamiento de datos de AngoZero (Djillali Adair). Información sobre cómo manejamos tus datos."
+>
+    <section class="py-32 px-6 bg-white text-black min-h-screen">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header -->
+            <div class="mb-16">
+                <a
+                    href="/"
+                    class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-gray-500 hover:text-black transition-colors mb-6"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        role="img"
+                        aria-label="Volver al inicio"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    Volver al inicio
+                </a>
+
+                <h1 class="font-black text-[clamp(2.5rem,8vw,6rem)] leading-[0.9] tracking-tighter uppercase">
+                    Política de
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-b from-gray-700 via-gray-400 to-gray-100">
+                        privacidad
+                    </span>
+                </h1>
+                <p class="text-sm text-gray-500 font-mono mt-4">
+                    Última actualización: {new Date().toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </p>
+            </div>
+
+            <!-- Contenido -->
+            <div class="prose prose-lg max-w-none">
+                <div class="border-2 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
+                    <h2 class="text-2xl font-bold uppercase tracking-tight mb-4">1. Información que recopilamos</h2>
+                    <p class="text-gray-600 mb-4">
+                        <strong class="text-black">AngoZero</strong> (operado por <strong class="text-black">Djillali Adair</strong>)
+                        es un sitio web de portafolio profesional. Este sitio <strong>no recopila, almacena ni procesa datos personales</strong>
+                        de los visitantes de forma automática.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li><strong class="text-black">No usamos cookies de seguimiento</strong></li>
+                        <li><strong class="text-black">No usamos herramientas de analítica</strong> (Google Analytics, etc.)</li>
+                        <li><strong class="text-black">No almacenamos tu dirección IP</strong></li>
+                        <li><strong class="text-black">No rastreamos tu navegación</strong></li>
+                    </ul>
+                </div>
+
+                <div class="border-2 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
+                    <h2 class="text-2xl font-bold uppercase tracking-tight mb-4">2. Contacto por email</h2>
+                    <p class="text-gray-600 mb-4">
+                        Si decides contactarme a través del email <a href={`mailto:${site.contactEmail}`} class="font-bold text-black underline">{site.contactEmail}</a>,
+                        la información que proporciones (nombre, email, mensaje) será:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Utilizada <strong class="text-black">únicamente</strong> para responder a tu consulta</li>
+                        <li><strong class="text-black">No compartida</strong> con terceros</li>
+                        <li><strong class="text-black">No utilizada</strong> para marketing o envío de newsletters</li>
+                        <li>Almacenada en mi cliente de correo personal de forma segura</li>
+                    </ul>
+                </div>
+
+                <div class="border-2 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
+                    <h2 class="text-2xl font-bold uppercase tracking-tight mb-4">3. Servicios de terceros</h2>
+                    <p class="text-gray-600 mb-4">
+                        Este sitio está alojado en <strong class="text-black">GitHub Pages</strong> y utiliza:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                        <li><strong class="text-black">GitHub Pages:</strong> Puede recopilar datos básicos de acceso (logs de servidor).
+                        Consulta la <a href="https://docs.github.com/es/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer" class="text-black underline">Política de Privacidad de GitHub</a></li>
+                        <li><strong class="text-black">jsDelivr CDN:</strong> Usado para cargar iconos de tecnologías.
+                        Consulta la <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener noreferrer" class="text-black underline">Política de Privacidad de jsDelivr</a></li>
+                    </ul>
+                    <p class="text-gray-600">
+                        No tengo control sobre estos servicios de terceros, por lo que te recomiendo revisar sus políticas de privacidad.
+                    </p>
+                </div>
+
+                <div class="border-2 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
+                    <h2 class="text-2xl font-bold uppercase tracking-tight mb-4">4. Tus derechos (GDPR y LFPDPPP)</h2>
+                    <p class="text-gray-600 mb-4">
+                        Aunque este sitio no recopila datos, respeto las leyes de protección de datos:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li><strong class="text-black">GDPR</strong> (Reglamento General de Protección de Datos, UE)</li>
+                        <li><strong class="text-black">LFPDPPP</strong> (Ley Federal de Protección de Datos Personales en Posesión de los Particulares, México)</li>
+                    </ul>
+                    <p class="text-gray-600 mt-4">
+                        Si me has contactado por email y deseas ejercer tus derechos ARCO (Acceso, Rectificación, Cancelación u Oposición),
+                        contáctame a <a href={`mailto:${site.contactEmail}`} class="font-bold text-black underline">{site.contactEmail}</a>.
+                    </p>
+                </div>
+
+                <div class="border-2 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
+                    <h2 class="text-2xl font-bold uppercase tracking-tight mb-4">5. Enlaces externos</h2>
+                    <p class="text-gray-600">
+                        Este sitio contiene enlaces a servicios externos (GitHub, proyectos en GitHub Pages, etc.).
+                        No soy responsable del contenido o las políticas de privacidad de esos sitios externos.
+                    </p>
+                </div>
+
+                <div class="border-2 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
+                    <h2 class="text-2xl font-bold uppercase tracking-tight mb-4">6. Cambios a esta política</h2>
+                    <p class="text-gray-600">
+                        Me reservo el derecho de actualizar esta política de privacidad en cualquier momento.
+                        Los cambios serán efectivos inmediatamente después de su publicación en esta página,
+                        con la fecha de actualización visible en la parte superior.
+                    </p>
+                </div>
+
+                <div class="border-2 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
+                    <h2 class="text-2xl font-bold uppercase tracking-tight mb-4">7. Contacto</h2>
+                    <p class="text-gray-600 mb-4">
+                        Si tienes preguntas sobre esta política de privacidad, contáctame:
+                    </p>
+                    <div class="bg-gray-50 border border-black p-4">
+                        <p class="font-mono text-sm mb-2"><strong class="text-black">Responsable:</strong> Djillali Adair (@AngoZero)</p>
+                        <p class="font-mono text-sm mb-2"><strong class="text-black">Email:</strong> <a href={`mailto:${site.contactEmail}`} class="text-black underline">{site.contactEmail}</a></p>
+                        <p class="font-mono text-sm mb-2"><strong class="text-black">Sitio web:</strong> <a href={site.url} class="text-black underline">{site.url}</a></p>
+                        <p class="font-mono text-sm"><strong class="text-black">GitHub:</strong> <a href={site.social.github} target="_blank" rel="noopener noreferrer" class="text-black underline">{site.social.github}</a></p>
+                    </div>
+                </div>
+
+                <!-- Resumen final -->
+                <div class="bg-black text-white border-2 border-black p-8 mt-12">
+                    <h3 class="text-xl font-bold uppercase tracking-tight mb-4">✓ En resumen</h3>
+                    <ul class="space-y-2 font-mono text-sm">
+                        <li>→ No uso cookies ni analítica</li>
+                        <li>→ No recopilo datos personales de visitantes</li>
+                        <li>→ Los emails son solo para responder consultas</li>
+                        <li>→ Tu privacidad está protegida</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

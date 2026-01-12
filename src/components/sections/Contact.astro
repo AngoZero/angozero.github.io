@@ -20,21 +20,24 @@ import { site } from "../../data/site";
                 tu sistema
             </span>
         </h2>
-        <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
+        <p class="text-gray-600 mt-6 max-w-2xl mx-auto text-sm md:text-base px-4">
             Cuéntame tu operación actual y lo que necesitas automatizar. Te
             respondo con una propuesta clara de alcance, tiempo y costo.
         </p>
 
-        <div class="mt-10 flex flex-col items-center gap-4">
+        <div class="mt-10 flex flex-col items-center gap-4 px-4">
             <a
                 href={`mailto:${site.contactEmail}`}
-                class="inline-flex items-center gap-3 border-2 border-black px-6 py-3 font-mono uppercase tracking-widest text-sm hover:bg-black hover:text-white transition-colors"
+                class="inline-flex items-center gap-3 border-2 border-black px-4 md:px-6 py-3 font-mono uppercase tracking-widest text-xs md:text-sm hover:bg-black hover:text-white transition-colors break-all md:break-normal"
             >
                 {site.contactEmail}
             </a>
             <span class="text-xs font-mono uppercase tracking-widest text-gray-400">
                 Respuesta en 24-48 horas
             </span>
+            <p class="text-sm text-gray-500 mt-2">
+                <strong class="text-black">Djillali Adair</strong> (@AngoZero)
+            </p>
         </div>
     </div>
 </section>
