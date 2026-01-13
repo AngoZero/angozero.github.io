@@ -1,42 +1,41 @@
 ---
 import { site } from "../../data/site";
+import ContactForm from "../ContactForm.astro";
 ---
 
 <section
     id="contact"
     class="py-32 px-6 bg-white text-black border-t-2 border-black"
 >
-    <div class="max-w-5xl mx-auto text-center">
-        <p class="text-xs font-mono uppercase tracking-widest text-gray-500">
-            [ Contacto ]
-        </p>
-        <h2
-            class="font-black text-[clamp(2.5rem,9vw,7.5rem)] md:text-[clamp(3rem,10vw,8rem)] leading-[0.9] tracking-tighter uppercase mt-6 break-words"
-        >
-            Hagamos
-            <span
-                class="block text-transparent bg-clip-text bg-gradient-to-b from-gray-700 via-gray-500 to-gray-400"
+    <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <p class="text-xs font-mono uppercase tracking-widest text-gray-500">
+                [ Contacto ]
+            </p>
+            <h2
+                class="font-black text-[clamp(2.5rem,9vw,7.5rem)] md:text-[clamp(3rem,10vw,8rem)] leading-[0.9] tracking-tighter uppercase mt-6 break-words"
             >
-                tu sistema
-            </span>
-        </h2>
-        <p class="text-gray-600 mt-6 max-w-2xl mx-auto text-sm md:text-base px-4">
-            Cuéntame tu operación actual y lo que necesitas automatizar. Te
-            respondo con una propuesta clara de alcance, tiempo y costo.
-        </p>
+                Hagamos
+                <span
+                    class="block text-transparent bg-clip-text bg-gradient-to-b from-gray-700 via-gray-500 to-gray-400"
+                >
+                    tu sistema
+                </span>
+            </h2>
+            <p class="text-gray-600 mt-6 max-w-2xl mx-auto text-sm md:text-base px-4">
+                Cuéntame tu operación actual y lo que necesitas automatizar. Te
+                respondo con una propuesta clara de alcance, tiempo y costo.
+            </p>
+        </div>
 
-        <div class="mt-10 flex flex-col items-center gap-4 px-4">
-            <a
-                href={`mailto:${site.contactEmail}`}
-                class="inline-flex items-center gap-3 border-2 border-black px-4 md:px-6 py-3 font-mono uppercase tracking-widest text-xs md:text-sm hover:bg-black hover:text-white transition-colors break-all md:break-normal"
-            >
-                {site.contactEmail}
-            </a>
-            <span class="text-xs font-mono uppercase tracking-widest text-gray-400">
-                Respuesta en 24-48 horas
-            </span>
-            <p class="text-sm text-gray-500 mt-2">
-                <strong class="text-black">Djillali Adair</strong> (@AngoZero)
+        <!-- Formulario de contacto -->
+        <ContactForm />
+
+        <!-- Información adicional -->
+        <div class="mt-12 text-center">
+            <p class="text-sm text-gray-500">
+                <strong class="text-black">Djillali Adair</strong> (@AngoZero) • Respuesta en 24-48 horas
             </p>
         </div>
     </div>

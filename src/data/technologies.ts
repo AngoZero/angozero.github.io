@@ -33,8 +33,16 @@ export const technologyCategories: TechnologyCategory[] = [
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
             },
             {
+                name: "Astro",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg",
+            },
+            {
                 name: "Vite",
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg",
+            },
+            {
+                name: "jQuery",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
             },
         ],
     },
@@ -46,12 +54,20 @@ export const technologyCategories: TechnologyCategory[] = [
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
             },
             {
+                name: "Express.js",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+            },
+            {
                 name: "Laravel",
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
             },
             {
                 name: "FastAPI",
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+            },
+            {
+                name: "Prisma",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
             },
             {
                 name: "REST APIs",
@@ -123,6 +139,27 @@ export const technologyCategories: TechnologyCategory[] = [
             {
                 name: "Git",
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+            },
+            {
+                name: "Docker",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+            },
+        ],
+    },
+    {
+        title: "IA & Automatización",
+        skills: [
+            {
+                name: "Claude API",
+                icon: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/anthropic.svg",
+            },
+            {
+                name: "OpenAI API",
+                icon: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/openai.svg",
+            },
+            {
+                name: "Gemini API",
+                icon: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/googlegemini.svg",
             },
         ],
     },

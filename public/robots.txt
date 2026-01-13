@@ -1,0 +1,11 @@
+# robots.txt para AngoZero Portfolio
+# https://angozero.github.io
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://angozero.github.io/sitemap-index.xml
+
+# Desallow admin or private paths (if any in the future)
+# Disallow: /admin/
