@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
 import { site } from "../data/site";
+import ScrollToTop from "../components/ScrollToTop.astro";
+import ScrollAnimations from "../components/ScrollAnimations.astro";
 
 interface Props {
     title?: string;
@@ -18,8 +20,14 @@ const canonical = Astro.site
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
+        <!-- Favicons -->
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+
+        <!-- Preconnect para mejor rendimiento -->
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
         <title>{title}</title>
@@ -108,5 +116,7 @@ const canonical = Astro.site
         <main>
             <slot />
         </main>
+        <ScrollToTop />
+        <ScrollAnimations />
     </body>
 </html>

@@ -1,0 +1,108 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { site } from "../data/site";
+---
+
+<Layout
+    title={`404 - Página no encontrada | ${site.name}`}
+    description="La página que buscas no existe. Vuelve al inicio para explorar el portafolio de AngoZero."
+>
+    <section class="relative min-h-screen flex items-center justify-center bg-white text-black overflow-hidden">
+        <!-- Patrón de fondo -->
+        <div
+            class="absolute inset-0 z-0 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px]"
+        >
+        </div>
+
+        <!-- Contenido -->
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <!-- Número 404 gigante -->
+            <div class="mb-12">
+                <h1
+                    class="font-black text-[clamp(6rem,25vw,20rem)] leading-[0.8] tracking-tighter select-none"
+                >
+                    <span class="block text-black">4</span>
+                    <span
+                        class="block text-transparent bg-clip-text bg-gradient-to-b from-gray-700 via-gray-500 to-gray-400"
+                    >
+                        0
+                    </span>
+                    <span class="block text-black">4</span>
+                </h1>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 mb-8">
+                <p class="font-mono text-xs uppercase tracking-widest text-gray-500 mb-4">
+                    [ Error ]
+                </p>
+                <h2 class="text-3xl md:text-4xl font-bold uppercase tracking-tight mb-4">
+                    Página no encontrada
+                </h2>
+                <p class="text-gray-600 max-w-lg mx-auto">
+                    La página que estás buscando no existe, fue movida o la URL es incorrecta.
+                    Vuelve al inicio para explorar el portafolio.
+                </p>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a
+                    href="/"
+                    class="px-8 py-4 border-2 border-black bg-black text-white font-mono uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-colors"
+                >
+                    Ir al inicio
+                </a>
+                <a
+                    href="#contact"
+                    class="px-8 py-4 border-2 border-black bg-white text-black font-mono uppercase tracking-widest text-sm hover:bg-black hover:text-white transition-colors"
+                >
+                    Contacto
+                </a>
+            </div>
+
+            <!-- Enlaces útiles -->
+            <div class="mt-16">
+                <p class="text-sm font-mono uppercase tracking-widest text-gray-500 mb-4">
+                    Enlaces útiles
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm">
+                    <a
+                        href="/#services"
+                        class="text-gray-600 hover:text-black transition-colors underline"
+                    >
+                        Servicios
+                    </a>
+                    <span class="text-gray-400">•</span>
+                    <a
+                        href="/#projects"
+                        class="text-gray-600 hover:text-black transition-colors underline"
+                    >
+                        Proyectos
+                    </a>
+                    <span class="text-gray-400">•</span>
+                    <a
+                        href="/#stack"
+                        class="text-gray-600 hover:text-black transition-colors underline"
+                    >
+                        Stack
+                    </a>
+                    <span class="text-gray-400">•</span>
+                    <a
+                        href="/#faq"
+                        class="text-gray-600 hover:text-black transition-colors underline"
+                    >
+                        FAQ
+                    </a>
+                </div>
+            </div>
+
+            <!-- Firma -->
+            <div class="mt-12 pt-8 border-t border-gray-300">
+                <p class="text-sm text-gray-500">
+                    <strong class="text-black">Djillali Adair</strong> (@AngoZero)
+                </p>
+            </div>
+        </div>
+    </section>
+</Layout>
