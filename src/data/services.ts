@@ -8,27 +8,27 @@ export const services: Service[] = [
     {
         title: "Software a la medida",
         description:
-            "Sistemas completos para operaciones reales: usuarios, roles, flujos y reportes.",
+            "Sistemas completos que se adaptan a tu flujo de trabajo real, no al revés.",
         outcomes: [
-            "Alta y gestión de usuarios",
+            "Gestión centralizada de información",
             "Paneles operativos y dashboards",
-            "Automatizaciones internas",
+            "Automatización de procesos clave",
         ],
     },
     {
         title: "Aplicaciones web & portales",
         description:
-            "Productos web rápidos y escalables para clientes y equipos internos.",
+            "Productos web rápidos, escalables y listos para crecer contigo.",
         outcomes: [
             "Arquitectura moderna y mantenible",
-            "Integraciones con servicios externos",
+            "Integraciones con APIs y servicios externos",
             "Seguridad y control de accesos",
         ],
     },
     {
         title: "Landing pages de alto rendimiento",
         description:
-            "Diseño brutalista con foco en conversión, SEO y tiempos de carga.",
+            "Páginas de aterrizaje con foco en conversión, SEO y velocidad de carga.",
         outcomes: [
             "Core Web Vitals optimizados",
             "Estructura SEO clara",

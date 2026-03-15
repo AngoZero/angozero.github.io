@@ -19,11 +19,10 @@ import { technologyCategories } from "../../data/technologies";
                 >
                     [ Resumen_de_habilidades ]
                 </p>
-                <p class="text-xs font-mono text-gray-400">// Tecnologías</p>
             </div>
 
             <h2
-                class="font-black text-[clamp(2.5rem,10vw,8rem)] md:text-[clamp(3rem,11vw,9rem)] leading-[0.85] tracking-tighter uppercase flex flex-col select-none break-words"
+                class="font-black text-[clamp(2.5rem,10vw,8rem)] md:text-[clamp(3rem,11vw,9rem)] leading-[0.85] tracking-tighter uppercase flex flex-col break-words"
             >
                 <span class="block text-black">Stack</span>
                 <span
@@ -51,7 +50,7 @@ import { technologyCategories } from "../../data/technologies";
                         <div class="md:col-span-8">
                             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                                 {category.skills.map((tech) => (
-                                    <div class="group relative bg-white border border-gray-200 hover:border-black transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                                    <div class="group relative bg-white border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 ease-out hover:-translate-y-2 hover:translate-x-2">
                                         <div class="p-4 flex flex-col items-center gap-4 h-full justify-center">
                                             <div class="w-12 h-12 flex items-center justify-center p-1 bg-gray-50 rounded-full group-hover:bg-white transition-colors">
                                                 <img

@@ -3,7 +3,7 @@ export const site = {
     realName: "Djillali Adair",
     title: "AngoZero | Djillali Adair - Desarrollador Fullstack & Software Engineer",
     description:
-        "Portafolio de AngoZero (Djillali Adair). Desarrollo de software a medida, aplicaciones web de alto rendimiento, arquitectura de sistemas y soluciones fullstack.",
+        "Portafolio de AngoZero (Djillali Adair). Desarrollador Fullstack Freelance: software a medida, aplicaciones web y soluciones digitales.",
     locale: "es_MX",
     author: "Djillali Adair",
     contactEmail: "contacto.angozero@gmail.com",
