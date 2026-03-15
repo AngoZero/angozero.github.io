@@ -112,6 +112,14 @@ export const technologyCategories: TechnologyCategory[] = [
                 icon: "https://www.vectorlogo.zone/logos/expoio/expoio-icon.svg",
             },
             {
+                name: "iOS",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg",
+            },
+            {
+                name: "Android",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
+            },
+            {
                 name: "Electron",
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg",
             },
@@ -143,23 +151,6 @@ export const technologyCategories: TechnologyCategory[] = [
             {
                 name: "Docker",
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-            },
-        ],
-    },
-    {
-        title: "IA & Automatización",
-        skills: [
-            {
-                name: "Claude API",
-                icon: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/anthropic.svg",
-            },
-            {
-                name: "OpenAI API",
-                icon: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/openai.svg",
-            },
-            {
-                name: "Gemini API",
-                icon: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/googlegemini.svg",
             },
         ],
     },

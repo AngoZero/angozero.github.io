@@ -12,12 +12,12 @@ export const processSteps: ProcessStep[] = [
     },
     {
         title: "Diseño & Arquitectura",
-        description: "Wireframes y decisiones técnicas claras.",
+        description: "Estructura visual y decisiones técnicas claras.",
         detail: "Stack, estructura y plan de entregables.",
     },
     {
         title: "Desarrollo",
-        description: "Implementación por sprints cortos.",
+        description: "Implementación por entregas cortas.",
         detail: "Entregas verificables y feedback continuo.",
     },
     {

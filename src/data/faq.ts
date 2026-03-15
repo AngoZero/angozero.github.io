@@ -5,9 +5,9 @@ export type FaqItem = {
 
 export const faqItems: FaqItem[] = [
     {
-        question: "¿Qué incluye un sistema a la medida?",
+        question: "¿Qué incluye un proyecto de software a la medida?",
         answer:
-            "Diseño, desarrollo, autenticación, roles, gestión de información y paneles operativos según tu flujo.",
+            "Desde el diseño hasta el despliegue: arquitectura, desarrollo, gestión de datos, paneles de control y la lógica que tu operación necesita.",
     },
     {
         question: "¿Cuánto tarda un proyecto?",
@@ -15,9 +15,9 @@ export const faqItems: FaqItem[] = [
             "Depende del alcance. Proyectos pequeños pueden tomar 2-4 semanas; sistemas completos, 6-12 semanas.",
     },
     {
-        question: "¿Trabajas con equipos internos?",
+        question: "¿Trabajas solo o también con equipos?",
         answer:
-            "Sí, puedo integrarme a tu equipo o trabajar de forma independiente con entregas semanales.",
+            "Ambos. Puedo integrarme a tu equipo existente o llevar el proyecto de forma independiente con entregas en los tiempos que el cliente necesite.",
     },
     {
         question: "¿Ofreces mantenimiento?",
