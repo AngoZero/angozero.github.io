@@ -11,27 +11,6 @@ const currentYear = new Date().getFullYear();
     >
     </div>
 
-    <div
-        class="absolute top-0 left-0 w-full p-6 md:p-10 flex justify-between items-start z-20 pointer-events-none mix-blend-difference"
-    >
-        <div class="flex flex-col gap-1">
-            <p
-                class="font-mono text-xs md:text-sm font-bold uppercase tracking-widest text-gray-500"
-            >
-                [ Desarrollador Fullstack ]
-            </p>
-            <p class="font-mono text-[10px] text-gray-400">
-                v2.0.{currentYear}
-            </p>
-        </div>
-        <div class="text-right">
-            <p
-                class="font-mono text-xs md:text-sm font-bold uppercase tracking-widest text-gray-500"
-            >
-                MX
-            </p>
-        </div>
-    </div>
 
     <div class="relative z-10 flex flex-col items-center text-center px-4">
         <p
@@ -84,28 +63,4 @@ const currentYear = new Date().getFullYear();
         </div>
     </div>
 
-    <div
-        class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 hidden sm:flex flex-col items-center gap-2 animate-bounce"
-        aria-hidden="true"
-    >
-        <span
-            class="font-mono text-[10px] uppercase tracking-widest text-gray-400"
-            >Desplazar</span
-        >
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="text-black"
-            role="img"
-            aria-label="Flecha hacia abajo"
-            ><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg
-        >
-    </div>
 </section>

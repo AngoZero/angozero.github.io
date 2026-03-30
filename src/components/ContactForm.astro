@@ -8,7 +8,6 @@ const formspreeAction = formspreeId
 ---
 
 <div class="max-w-2xl mx-auto">
-    <!-- Formulario de contacto -->
     <form
         id="contact-form"
         action={formspreeAction}
@@ -16,7 +15,6 @@ const formspreeAction = formspreeId
         data-email={site.contactEmail}
         class="border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8"
     >
-        <!-- Nombre -->
         <div class="mb-6">
             <label
                 for="name"
@@ -34,7 +32,6 @@ const formspreeAction = formspreeId
             />
         </div>
 
-        <!-- Email -->
         <div class="mb-6">
             <label
                 for="email"
@@ -52,7 +49,6 @@ const formspreeAction = formspreeId
             />
         </div>
 
-        <!-- Tipo de proyecto (opcional) -->
         <div class="mb-6">
             <label
                 for="project-type"
@@ -73,7 +69,6 @@ const formspreeAction = formspreeId
             </select>
         </div>
 
-        <!-- Mensaje -->
         <div class="mb-6">
             <label
                 for="message"
@@ -87,16 +82,14 @@ const formspreeAction = formspreeId
                 required
                 rows="6"
                 class="w-full px-4 py-3 border-2 border-black focus:outline-none focus:ring-2 focus:ring-black font-mono text-sm resize-none"
-                placeholder="Cuéntame sobre tu proyecto o consulta..."
+                placeholder="Cuéntame sobre tu proyecto, tu idea o tu problema..."
             ></textarea>
         </div>
 
-        <!-- Hidden fields para FormSpree -->
         <input type="hidden" name="_subject" value="Nuevo mensaje desde AngoZero Portfolio" />
         <input type="hidden" name="_replyto" value={site.contactEmail} />
         <input type="text" name="_gotcha" style="display:none" />
 
-        <!-- Botón de envío -->
         <div class="flex flex-col sm:flex-row gap-4 items-center">
             <button
                 type="submit"
@@ -116,7 +109,6 @@ const formspreeAction = formspreeId
             </p>
         </div>
 
-        <!-- Mensaje de estado -->
         <div
             id="form-status"
             class="mt-6 p-4 border-2 border-black hidden"
@@ -137,7 +129,6 @@ const formspreeAction = formspreeId
             const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
             const originalText = submitBtn.textContent;
 
-            // Deshabilitar botón y cambiar texto
             submitBtn.disabled = true;
             submitBtn.textContent = 'Enviando...';
 
@@ -152,11 +143,10 @@ const formspreeAction = formspreeId
                 });
 
                 if (response.ok) {
-                    // Éxito
                     statusDiv.className = 'mt-6 p-4 border-2 border-black bg-white';
                     statusDiv.innerHTML = `
                         <p class="font-mono text-sm text-black">
-                            ✓ Mensaje enviado con éxito. Te responderé en 24-48 horas.
+                            ✓ Mensaje enviado. Te respondo en menos de 24h.
                         </p>
                     `;
                     form.reset();
@@ -164,23 +154,19 @@ const formspreeAction = formspreeId
                     throw new Error('Error al enviar');
                 }
             } catch (error) {
-                // Error
                 statusDiv.className = 'mt-6 p-4 border-2 border-black bg-gray-100';
                 statusDiv.innerHTML = `
                     <p class="font-mono text-sm text-black">
-                        ✗ Hubo un error. Por favor, envíame un email directamente a
+                        ✗ Hubo un error. Escríbeme directamente a
                         <a href="mailto:${form.dataset.email}" class="underline font-bold">
                             ${form.dataset.email}
                         </a>
                     </p>
                 `;
             } finally {
-                // Restaurar botón
                 submitBtn.disabled = false;
                 submitBtn.textContent = originalText;
                 statusDiv.classList.remove('hidden');
-
-                // Scroll al mensaje de estado
                 statusDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }
         });
