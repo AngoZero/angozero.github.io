@@ -1,0 +1,15 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F8F8F8" />
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1.2" fill="#D4D4D8" />
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)" />
+  <rect x="56" y="56" width="1088" height="518" stroke="#111111" stroke-width="2" />
+  <text x="84" y="110" fill="#6B7280" font-family="monospace" font-size="22" letter-spacing="6">[ DESARROLLADOR FULLSTACK ]</text>
+  <text x="84" y="250" fill="#111111" font-family="Arial, Helvetica, sans-serif" font-size="114" font-weight="900">ANGOZERO</text>
+  <text x="84" y="356" fill="#6B7280" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="900">PORTAFOLIO FREELANCE</text>
+  <text x="84" y="434" fill="#374151" font-family="Arial, Helvetica, sans-serif" font-size="34">
+    Software a la medida, aplicaciones web y soluciones digitales con enfoque en ejecución.
+  </text>
+  <text x="84" y="516" fill="#111111" font-family="monospace" font-size="24" letter-spacing="4">DJILLALI ADAIR / ANGOZERO</text>
+</svg>

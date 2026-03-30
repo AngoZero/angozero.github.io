@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+/* Cursor personalizado */
+html {
+    cursor: crosshair;
+}
+
+a, button, select, [role="button"] {
+    cursor: pointer;
+}
+
+
+/* Header fijo */
+#site-header {
+    background: transparent;
+}
+
+#site-header.scrolled {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+
 ::selection {
     background: #000000;
     color: #ffffff;

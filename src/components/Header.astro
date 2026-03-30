@@ -1,0 +1,29 @@
+---
+const isPortfolio = Astro.url.pathname.startsWith("/portafolio");
+---
+
+<header id="site-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <nav class="flex justify-between items-center p-6 md:p-10">
+        <a
+            href="/"
+            class="font-mono text-xs md:text-sm font-bold uppercase tracking-widest text-gray-500 hover:text-black transition-colors"
+        >
+            AngoZero
+        </a>
+        <a
+            href={isPortfolio ? "/" : "/portafolio"}
+            class="font-mono text-xs md:text-sm font-bold uppercase tracking-widest text-gray-500 hover:text-black transition-colors"
+        >
+            {isPortfolio ? "Inicio" : "Portafolio"}
+        </a>
+    </nav>
+</header>
+
+<script>
+    const header = document.getElementById("site-header");
+    const onScroll = () => {
+        header?.classList.toggle("scrolled", window.scrollY > 80);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+</script>

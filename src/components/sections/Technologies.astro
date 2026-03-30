@@ -1,5 +1,9 @@
 ---
 import { technologyCategories } from "../../data/technologies";
+
+const mainTechs = ["React", "TypeScript", "Astro", "Node.js", "Laravel", "Tailwind", "Next.js", "FastAPI"];
+const allSkills = technologyCategories.flatMap((c) => c.skills);
+const featured = allSkills.filter((s) => mainTechs.includes(s.name));
 ---
 
 <section
@@ -12,69 +16,71 @@ import { technologyCategories } from "../../data/technologies";
     </div>
 
     <div class="relative z-10 max-w-7xl mx-auto">
-        <div class="mb-32 border-b border-black pb-8">
-            <div class="flex justify-between items-end mb-4">
-                <p
-                    class="text-xs font-mono text-gray-500 uppercase tracking-widest"
-                >
-                    [ Resumen_de_habilidades ]
+        <div class="mb-20 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.8fr)] lg:items-end">
+            <div class="fade-in-up">
+                <p class="text-xs font-mono text-gray-500 uppercase tracking-widest">
+                    [ Stack ]
                 </p>
-            </div>
-
-            <h2
-                class="font-black text-[clamp(2.5rem,10vw,8rem)] md:text-[clamp(3rem,11vw,9rem)] leading-[0.85] tracking-tighter uppercase flex flex-col break-words"
-            >
-                <span class="block text-black">Stack</span>
-                <span
-                    class="block text-transparent bg-clip-text bg-gradient-to-b from-gray-700 via-gray-500 to-gray-400"
+                <h2
+                    class="mt-6 font-black text-[clamp(2.5rem,10vw,8rem)] leading-[0.85] tracking-tighter uppercase break-words"
                 >
-                    tecnológico
-                </span>
-            </h2>
+                    Stack
+                    <span
+                        class="block text-transparent bg-clip-text bg-gradient-to-b from-gray-700 via-gray-500 to-gray-400"
+                    >
+                        tecnológico
+                    </span>
+                </h2>
+            </div>
+            <p class="fade-in-up text-sm font-medium leading-relaxed text-gray-600 md:text-base">
+                Estas son las herramientas principales con las que trabajo. Elijo stack según
+                el problema, no por moda.
+            </p>
         </div>
 
-        <div class="flex flex-col gap-24">
-            {
-                technologyCategories.map((category, index) => (
-                    <div class="relative grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 group/section">
-                        <div class="md:col-span-4 flex flex-col justify-start md:sticky md:top-32 h-fit">
-                            <span class="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-b from-gray-200 to-white stroke-black opacity-50 group-hover/section:opacity-100 group-hover/section:from-black group-hover/section:to-gray-500 transition-all duration-500 leading-none mb-4 select-none">
-                                0{index + 1}
-                            </span>
-                            <h3 class="text-2xl font-bold uppercase tracking-tight flex items-center gap-4 break-words leading-tight">
-                                <span class="w-8 h-[2px] bg-black" />
+        <!-- Featured: las principales con icono -->
+        <div class="fade-in-up grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+            {featured.map((tech) => (
+                <div class="group border-2 border-black bg-white p-5 flex items-center gap-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 ease-out hover:-translate-y-1 hover:translate-x-1">
+                    <img
+                        src={tech.icon}
+                        alt={tech.name}
+                        class="w-8 h-8 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                        loading="lazy"
+                    />
+                    <span class="font-mono text-xs font-bold uppercase tracking-widest">
+                        {tech.name}
+                    </span>
+                </div>
+            ))}
+        </div>
+
+        <!-- Resto agrupado por categoría como chips -->
+        <div class="fade-in-up">
+            <details class="group">
+                <summary class="cursor-pointer font-mono text-xs uppercase tracking-widest text-gray-500 hover:text-black transition-colors flex items-center gap-3 mb-6">
+                    <span class="h-[2px] w-8 bg-current"></span>
+                    Ver stack completo
+                    <span class="transition-transform duration-300 group-open:rotate-180">&#9662;</span>
+                </summary>
+
+                <div class="flex flex-col gap-8 pt-4 border-t border-black/10">
+                    {technologyCategories.map((category) => (
+                        <div>
+                            <h3 class="font-mono text-[10px] uppercase tracking-[0.3em] text-gray-500 mb-3">
                                 {category.title}
                             </h3>
-                        </div>
-
-                        <div class="md:col-span-8">
-                            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                            <div class="flex flex-wrap gap-2">
                                 {category.skills.map((tech) => (
-                                    <div class="group relative bg-white border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 ease-out hover:-translate-y-2 hover:translate-x-2">
-                                        <div class="p-4 flex flex-col items-center gap-4 h-full justify-center">
-                                            <div class="w-12 h-12 flex items-center justify-center p-1 bg-gray-50 rounded-full group-hover:bg-white transition-colors">
-                                                <img
-                                                    src={tech.icon}
-                                                    alt={tech.name}
-                                                    class="w-full h-full object-contain filter transition-all duration-300 
-                                                           grayscale-0 opacity-100 
-                                                           md:grayscale md:opacity-40 
-                                                           group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
-                                                    loading="lazy"
-                                                />
-                                            </div>
-
-                                            <p class="font-mono text-[10px] uppercase tracking-wider text-gray-600 md:text-gray-400 group-hover:text-black transition-colors text-center font-bold">
-                                                {tech.name}
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <span class="border border-black px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.15em] hover:bg-black hover:text-white transition-colors">
+                                        {tech.name}
+                                    </span>
                                 ))}
                             </div>
                         </div>
-                    </div>
-                ))
-            }
+                    ))}
+                </div>
+            </details>
         </div>
     </div>
 </section>

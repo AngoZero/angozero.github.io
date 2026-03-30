@@ -28,10 +28,10 @@
       "icons": []
     },
     {
-      "name": "Proyectos",
-      "short_name": "Proyectos",
-      "description": "Ver proyectos realizados",
-      "url": "/#projects",
+      "name": "Portafolio",
+      "short_name": "Portafolio",
+      "description": "Ver casos y proyectos destacados",
+      "url": "/#portfolio",
       "icons": []
     },
     {

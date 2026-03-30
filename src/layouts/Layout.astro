@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import { site } from "../data/site";
+import Header from "../components/Header.astro";
 import ScrollToTop from "../components/ScrollToTop.astro";
 import ScrollAnimations from "../components/ScrollAnimations.astro";
 
@@ -23,8 +24,6 @@ const canonical = Astro.site
 
         <!-- Favicons -->
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
 
         <!-- Preconnect para mejor rendimiento -->
@@ -113,6 +112,7 @@ const canonical = Astro.site
         />
     </head>
     <body class="bg-white text-black font-sans antialiased">
+        <Header />
         <main>
             <slot />
         </main>
