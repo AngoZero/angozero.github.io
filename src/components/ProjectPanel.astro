@@ -12,7 +12,7 @@ const isPreview = variant === "preview";
 const detailItems = isPreview
     ? [
         {
-            label: "Valor entregado",
+            label: "Resultado clave",
             value: project.result,
         },
     ]
@@ -30,124 +30,213 @@ const detailItems = isPreview
             value: project.result,
         },
     ];
+
+const primaryHighlight = detailItems[0];
+const visibleTechnologies = isPreview
+    ? project.technologies.slice(0, 3)
+    : project.technologies;
+const hiddenTechnologyCount = isPreview
+    ? Math.max(project.technologies.length - visibleTechnologies.length, 0)
+    : 0;
+const projectInitials = project.title
+    .split(/\s+/)
+    .map((word) => word[0]?.toUpperCase() ?? "")
+    .join("")
+    .slice(0, 2);
 ---
 
 <article
-    class="group flex h-full flex-col overflow-hidden border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-transform duration-300 ease-out hover:-translate-y-2 hover:translate-x-2"
+    class="group flex h-full flex-col overflow-hidden border-[3px] border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:translate-x-0.5 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]"
 >
-    <div
-        class="flex items-start justify-between gap-4 border-b-2 border-black bg-gray-50 px-5 py-4 md:px-6"
+    <header
+        class="flex flex-col gap-4 border-b-[3px] border-black bg-black px-5 py-6 text-white md:flex-row md:items-end md:justify-between md:px-6"
     >
-        <div>
-            <p
-                class="font-mono text-[10px] uppercase tracking-[0.3em] text-gray-500"
-            >
+        <div class="space-y-3">
+            <p class="font-mono text-[11px] uppercase tracking-[0.32em] text-white/70">
                 [ {project.category} ]
             </p>
+
             <h3
-                class="mt-2 text-2xl font-bold uppercase tracking-tight break-words leading-tight md:text-3xl"
+                class="max-w-4xl text-[clamp(1.9rem,4vw,3.35rem)] font-black uppercase leading-[0.9] tracking-[-0.04em] text-white"
             >
                 {project.title}
             </h3>
         </div>
 
-        <span class="font-mono text-xs font-bold uppercase tracking-widest">
-            {project.year}
-        </span>
-    </div>
-
-    <div class="grid h-full grid-cols-1 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-        <div
-            class="relative min-h-[240px] border-b-2 border-black bg-gray-100 md:min-h-full md:border-b-0 md:border-r-2"
-        >
-            {
-                project.image ? (
-                    <img
-                        src={project.image}
-                        alt={`Vista previa del proyecto ${project.title}`}
-                        class="absolute inset-0 h-full w-full object-cover transition-all duration-500 group-hover:scale-[1.02]"
-                        loading="lazy"
-                        decoding="async"
-                    />
-                ) : (
-                    <div class="absolute inset-0 overflow-hidden bg-[#f5f5f5]">
-                        <div
-                            class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:18px_18px]"
-                        >
-                        </div>
-                        <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white to-transparent">
-                        </div>
-                        <div class="absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 text-center">
-                            <span
-                                class="font-black text-5xl uppercase tracking-tight text-gray-200 md:text-6xl"
-                            >
-                                {project.year}
-                            </span>
-                            <p
-                                class="font-mono text-[11px] uppercase tracking-[0.3em] text-gray-500"
-                            >
-                                Vista previa próximamente
-                            </p>
-                        </div>
-                    </div>
-                )
-            }
+        <div class="flex flex-wrap items-center gap-3 md:justify-end">
+            <span
+                class="inline-flex min-h-10 items-center border border-white/30 px-4 text-xs font-mono font-bold uppercase tracking-[0.28em] text-white"
+            >
+                {project.year}
+            </span>
+            <span
+                class="inline-flex min-h-10 items-center border border-white bg-white px-4 text-xs font-mono font-bold uppercase tracking-[0.24em] text-black"
+            >
+                En linea
+            </span>
         </div>
+    </header>
 
-        <div class="flex h-full flex-col gap-6 p-6 md:p-8">
-            <p class="text-sm font-medium leading-relaxed text-gray-600 md:text-base">
-                {project.summary}
-            </p>
-
+    <div class="flex flex-1 flex-col">
+        <div class="relative overflow-hidden border-b-[3px] border-black bg-[#f3f3f3]">
             <div
                 class:list={[
-                    "grid gap-4",
-                    isPreview ? "grid-cols-1" : "grid-cols-1 lg:grid-cols-3",
+                    "relative w-full overflow-hidden",
+                    "aspect-[16/9]",
                 ]}
             >
                 {
-                    detailItems.map((item) => (
-                        <div class="border border-black/10 bg-gray-50 p-4">
-                            <p
-                                class="font-mono text-[10px] uppercase tracking-[0.3em] text-gray-500"
+                    project.image ? (
+                        <>
+                            <img
+                                src={project.image}
+                                alt={`Vista previa del proyecto ${project.title}`}
+                                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out will-change-transform group-hover:scale-[1.03]"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div class="absolute inset-x-0 bottom-0 flex items-end justify-end p-5 md:p-6">
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="border border-white/45 bg-black/40 px-3 py-2 font-mono text-[10px] uppercase tracking-[0.28em] text-white/75 backdrop-blur-sm transition-colors duration-200 hover:bg-white/90 hover:text-black"
+                                >
+                                    {project.linkLabel}
+                                </a>
+                            </div>
+                        </>
+                    ) : (
+                        <div class="absolute inset-0 overflow-hidden bg-[#f1f1f1]">
+                            <div
+                                class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#d4d4d4_0,transparent_46%)]"
                             >
-                                {item.label}
-                            </p>
-                            <p class="mt-3 text-sm leading-relaxed text-gray-700">
-                                {item.value}
-                            </p>
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-[linear-gradient(135deg,transparent_0%,transparent_44%,rgba(0,0,0,0.08)_44%,rgba(0,0,0,0.08)_56%,transparent_56%,transparent_100%)]"
+                            >
+                            </div>
+                            <div
+                                class="absolute inset-x-0 top-0 flex items-center justify-between border-b border-black/10 px-5 py-4 font-mono text-[10px] uppercase tracking-[0.32em] text-gray-500"
+                            >
+                                <span>[ Identidad digital ]</span>
+                                <span>{project.year}</span>
+                            </div>
+                            <div class="absolute inset-0 flex flex-col justify-between p-5 md:p-6">
+                                <div class="flex justify-end">
+                                    <span
+                                        class="border border-black px-3 py-1 font-mono text-[10px] uppercase tracking-[0.3em] text-black"
+                                    >
+                                        {project.category}
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <span
+                                        class="block font-black text-[clamp(4rem,14vw,8rem)] leading-none tracking-[-0.08em] text-black/10"
+                                    >
+                                        {projectInitials}
+                                    </span>
+                                    <p
+                                        class="max-w-md text-2xl font-black uppercase leading-[0.9] tracking-[-0.04em] text-black md:text-4xl"
+                                    >
+                                        {project.title}
+                                    </p>
+                                    <p class="mt-4 max-w-sm text-sm leading-relaxed text-gray-600">
+                                        {project.summary}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    ))
+                    )
                 }
             </div>
+        </div>
 
-            <div class="mt-auto flex flex-col gap-5">
-                <div class="flex flex-wrap gap-2">
+        <div class="flex flex-col gap-6 bg-white p-6 md:p-8">
+            <div class="space-y-4">
+                <div class="flex items-center gap-4">
+                    <p class="font-mono text-[10px] uppercase tracking-[0.32em] text-gray-500">
+                        [ Contexto ]
+                    </p>
+                    <div class="h-px flex-1 bg-black/15"></div>
+                </div>
+
+                <p
+                    class:list={[
+                        "max-w-2xl font-medium leading-relaxed text-gray-700",
+                        isPreview ? "text-[0.98rem] md:text-[1.05rem]" : "text-sm md:text-base",
+                    ]}
+                >
+                    {project.summary}
+                </p>
+            </div>
+
+            {
+                !isPreview && (
+                    <div class="grid gap-4 md:grid-cols-3">
+                        {
+                            detailItems.map((item, index) => (
+                                <div class="overflow-hidden border border-black/20 bg-[#f5f5f5] transition-colors duration-200 hover:border-black/40">
+                                    <div class="h-1.5 w-full bg-black"></div>
+                                    <div class="p-5">
+                                        <div class="flex items-center gap-2">
+                                            <span class="font-mono text-[10px] text-gray-400">0{index + 1}</span>
+                                            <p
+                                                class="font-mono text-[11px] uppercase tracking-[0.32em] text-gray-500"
+                                            >
+                                                {item.label}
+                                            </p>
+                                        </div>
+                                        <p class="mt-4 text-sm leading-relaxed text-gray-700">
+                                            {item.value}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                )
+            }
+
+            <div class="flex flex-col gap-6 border-t border-black/15 pt-6">
+                <div class="flex flex-wrap gap-2.5">
                     {
-                        project.technologies.map((technology) => (
+                        visibleTechnologies.map((technology) => (
                             <span
-                                class="border border-black px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-black"
+                                class="inline-flex min-h-9 items-center border border-black px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-[0.24em] text-black transition-colors duration-200 hover:bg-black hover:text-white"
                             >
                                 {technology}
                             </span>
                         ))
                     }
+                    {
+                        hiddenTechnologyCount > 0 && (
+                            <span
+                                class="inline-flex min-h-9 items-center border border-black/30 px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-[0.24em] text-gray-500"
+                            >
+                                +{hiddenTechnologyCount}
+                            </span>
+                        )
+                    }
                 </div>
 
-                <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                    <p class="text-sm text-gray-500">
-                        Caso compacto para mostrar enfoque, stack y capacidad de entrega.
+                {!isPreview && (
+                <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                    <p class="max-w-xl text-xs leading-relaxed text-gray-500">
+                        Caso completo para explicar criterio de producto, decisiones de implementacion y resultado visible.
                     </p>
 
                     <a
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="inline-flex min-h-11 items-center justify-center border-2 border-black px-5 py-3 text-center font-mono text-xs uppercase tracking-[0.2em] transition-colors hover:bg-black hover:text-white"
+                        class="inline-flex min-h-11 w-full items-center justify-center border-2 border-black px-5 py-3 text-center font-mono text-xs font-bold uppercase tracking-[0.24em] text-black transition-colors duration-300 hover:bg-black hover:text-white sm:w-auto"
                     >
-                        {project.linkLabel}
+                        {project.linkLabel} <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
                     </a>
                 </div>
+                )}
             </div>
         </div>
     </div>
