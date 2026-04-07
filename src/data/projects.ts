@@ -33,6 +33,24 @@ export const projects: Project[] = [
         featured: true,
     },
     {
+        title: "Invitación de Boda",
+        category: "Invitación digital para evento",
+        year: "2026",
+        summary:
+            "Invitación digital interactiva para boda con animaciones de scroll, galería de fotos, detalles del evento, código de vestimenta, mesa de regalos y confirmación de asistencia.",
+        challenge:
+            "Reemplazar la invitación impresa tradicional con una experiencia digital elegante, interactiva y fácil de compartir por enlace.",
+        solution:
+            "Sitio estático con Astro y CSS, animaciones con Intersection Observer, secciones modulares para cada detalle del evento y formulario de RSVP integrado.",
+        result:
+            "Experiencia fluida y memorable que los invitados pueden consultar desde cualquier dispositivo, con toda la información del evento en un solo lugar.",
+        technologies: ["Astro", "TypeScript", "CSS", "Vercel"],
+        image: "/images/eventos-preview.png",
+        link: "https://invitacion-boda-sepia.vercel.app",
+        linkLabel: "Ver sitio",
+        featured: true,
+    },
+    {
         title: "Mi portafolio",
         category: "Portafolio personal",
         year: "2025",
