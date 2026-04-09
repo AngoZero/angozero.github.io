@@ -15,6 +15,24 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        title: "Project Hub",
+        category: "Herramienta local para desarrolladores",
+        year: "2026",
+        summary:
+            "Aplicación desktop orientada a centralizar proyectos locales con capturas reales del producto, enfoque visual cuidado y despliegue público listo para compartir.",
+        challenge:
+            "Mostrar una herramienta para desarrolladores con personalidad propia, dejando claro su valor desde la primera vista y manteniendo una experiencia rápida de explorar.",
+        solution:
+            "Landing construida con Vite y TypeScript, apoyada por capturas reales del producto, variantes por tema e idioma, y un despliegue independiente en Vercel.",
+        result:
+            "Caso publicado con URL pública estable, narrativa visual más sólida y una presentación lista para portafolio y validación con clientes o reclutadores.",
+        technologies: ["Vite", "TypeScript", "Tauri", "Vercel"],
+        image: null,
+        link: "https://landing-project-hub.vercel.app",
+        linkLabel: "Ver sitio",
+        featured: true,
+    },
+    {
         title: "BurgerHouse",
         category: "Landing para restaurante",
         year: "2026",
