@@ -15,7 +15,7 @@ export interface Project {
 
 export const projects: Project[] = [
     {
-        title: "Project Hub",
+        title: "landing-project-hub",
         category: "Herramienta local para desarrolladores",
         year: "2026",
         summary:
