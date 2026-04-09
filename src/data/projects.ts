@@ -27,8 +27,8 @@ export const projects: Project[] = [
         result:
             "Caso publicado con URL pública estable, narrativa visual más sólida y una presentación lista para portafolio y validación con clientes o reclutadores.",
         technologies: ["Vite", "TypeScript", "Tauri", "Vercel"],
-        image: null,
-        link: "https://landing-project-hub.vercel.app",
+        image: "/images/landing-project-hub-preview.png",
+        link: "https://landing-project-hub.vercel.app/",
         linkLabel: "Ver sitio",
         featured: true,
     },
