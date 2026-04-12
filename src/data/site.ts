@@ -8,7 +8,10 @@ export const site = {
     author: "Djillali Adair",
     contactEmail: "contacto.angozero@gmail.com",
     url: "https://angozero.github.io",
-    ogImage: "/og-image.svg",
+    ogImage: "/og-image.png",
+    ogImageWidth: 1200,
+    ogImageHeight: 630,
+    ogImageType: "image/png",
     keywords: "AngoZero, Djillali Adair, Desarrollador Fullstack, Software Engineer, Desarrollo Web, Astro, Tailwind, React, México, Programador",
     social: {
         github: "https://github.com/AngoZero",
