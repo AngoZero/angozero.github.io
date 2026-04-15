@@ -15,6 +15,24 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        title: "PortKill",
+        category: "Herramienta nativa para macOS",
+        year: "2026",
+        summary:
+            "App nativa de menu bar para macOS que monitorea puertos TCP en escucha y permite terminar procesos con un click. Swift 6, SwiftUI, diseño brutalista.",
+        challenge:
+            "Crear una utilidad de desarrollo liviana que reemplace el flujo manual de lsof + kill en la terminal, sin depender de frameworks externos ni permisos elevados.",
+        solution:
+            "App de menu bar construida con Swift 6 y SwiftUI puro, escaneo de puertos vía lsof, auto-refresh cada 2 segundos, y pipeline de release automatizado con GitHub Actions.",
+        result:
+            "Herramienta funcional publicada con landing page propia, .dmg descargable desde GitHub Releases y caso de portafolio que demuestra desarrollo nativo para macOS.",
+        technologies: ["Swift", "SwiftUI", "XcodeGen", "GitHub Actions"],
+        image: "/images/portkill-preview.png",
+        link: "https://landing-portkill.vercel.app/",
+        linkLabel: "Ver sitio",
+        featured: true,
+    },
+    {
         title: "Project Hub",
         category: "Herramienta local para desarrolladores",
         year: "2026",
